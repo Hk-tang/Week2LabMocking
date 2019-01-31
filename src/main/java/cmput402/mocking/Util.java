@@ -1,6 +1,7 @@
 package cmput402.mocking;
 
 import service.City;
+import service.Salary;
 
 import java.util.List;
 
@@ -13,6 +14,16 @@ public class Util {
         for(String aCity:cities) {
             if(aCity.equals("Edmonton")){
               count++;
+            }
+        }
+        return count;
+    }
+
+    public int filterSalaries(Salary salary) {
+        int count = 0;
+        for (Integer sal:salary.returnSalaries()) {
+            if(sal > 50000) {
+                count++;
             }
         }
         return count;
