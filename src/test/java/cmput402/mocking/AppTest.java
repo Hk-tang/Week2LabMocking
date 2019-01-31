@@ -35,4 +35,8 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    public void testCapitalizeName() {
+        assert("Abram Hindle".equals(Main.capitalizeName("abram hindle")));
+    }
 }

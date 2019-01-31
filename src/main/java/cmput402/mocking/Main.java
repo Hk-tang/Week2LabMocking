@@ -1,5 +1,9 @@
 package cmput402.mocking;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.StringJoiner;
+
 /**
  * Hello world!
  *
@@ -17,4 +21,13 @@ public class Main
     	Address address3= new Address("University of Victoria", "Victoria");
     	Employee employee3= new Employee("Abram hindle", 2, 70000, address3);
     }
+
+    static public String capitalizeName(String name) {
+    	List<String> names = Arrays.asList(name.split(" "));
+    	StringJoiner capitalizedNames = new StringJoiner(" ");
+		names.forEach((String part) -> {
+			capitalizedNames.add(part.substring(0, 1).toUpperCase() + part.substring(1));
+		});
+    	return capitalizedNames.toString();
+	}
 }
